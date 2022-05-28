@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 9 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     voice_emotion_dataframe_norm_red_150_up-weka.filters.unsupervised.attribute.Remove-R1,3
+Instances:    800
+Attributes:   3
+              Emotion
+              MEAN
+              LNZ
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 9 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         508               63.5    %
+Incorrectly Classified Instances       292               36.5    %
+Kappa statistic                          0.5133
+Mean absolute error                      0.2135
+Root mean squared error                  0.3448
+Relative absolute error                 56.9394 %
+Root relative squared error             79.6341 %
+Total Number of Instances              800     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,645    0,107    0,668      0,645    0,656      0,545    0,890     0,651     angry
+                 0,725    0,120    0,668      0,725    0,695      0,589    0,906     0,683     happy
+                 0,530    0,107    0,624      0,530    0,573      0,448    0,874     0,634     neutral
+                 0,640    0,153    0,582      0,640    0,610      0,472    0,859     0,559     sad
+Weighted Avg.    0,635    0,122    0,635      0,635    0,634      0,514    0,882     0,632     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 129  71   0   0 |   a = angry
+  55 145   0   0 |   b = happy
+   1   1 106  92 |   c = neutral
+   8   0  64 128 |   d = sad
+
